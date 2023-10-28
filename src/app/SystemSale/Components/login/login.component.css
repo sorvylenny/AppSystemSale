@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@700&display=swap');
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.cardLogin{
+    max-width: 400px !important;
+    margin: 2em auto;
+    text-align: center;
+    max-height: 600px;
+    background-color:beige;
+}
+
+.header{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.full-width{
+    width: 100%;
+}

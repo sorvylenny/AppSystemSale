@@ -1,0 +1,68 @@
+<h1 mat-dialog-title>{{ titleAction }}</h1>
+
+<mat-dialog-content>
+  <form [formGroup]="formUser">
+    <mat-grid-list cols="1" rowHeight="100px">
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre Completo</mat-label>
+          <input matInput formControlName="fullname" autocomplete="off" />
+          <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input matInput formControlName="email" autocomplete="off" />
+          <mat-icon matSuffix>mail</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Rol</mat-label>
+          <mat-select formControlName="idRoles">
+            <mat-option *ngFor="let item of ListRoles" [value]="item.idRoles">
+              {{ item.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Clave</mat-label>
+          <input class="password"
+            [type]="hidePassword ? 'password' : 'text'"
+            matInput
+            formControlName="clave"
+            autocomplete="off"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hidePassword = !hidePassword"
+            type="button"
+          ></button>
+          <mat-icon matSuffix>{{hidePassword ? "visibility_off" : "visibility"}}</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="esActivo">
+            <mat-option value="1">Activo</mat-option>
+            <mat-option value="0">Inactivo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+    <button mat-raised-button [disabled]="formUser.invalid" (click)="saveEditUser()">{{buttonAction}}</button>
+
+</mat-dialog-actions>
