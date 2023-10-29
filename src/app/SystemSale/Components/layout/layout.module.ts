@@ -10,6 +10,7 @@ import { DetailsSaleComponent } from './Pages/details-sale/details-sale.componen
 import { ReportComponent } from './Pages/report/report.component';
 import { SharedModule } from '../../Shared/shared/shared.module';
 import { ModelUserComponent } from './Models/model-user/model-user.component';
+import { ModelProductComponent } from './Models/model-product/model-product.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ModelUserComponent } from './Models/model-user/model-user.component';
     SaleComponent,
     DetailsSaleComponent,
     ReportComponent,
-    ModelUserComponent
+    ModelUserComponent,
+    ModelProductComponent
   ],
   imports: [
     CommonModule,

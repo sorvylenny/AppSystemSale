@@ -20,11 +20,11 @@ export class UsersService {
   GetUsers():Observable<ResponseApi> {
     return this.http.get<ResponseApi>(`${this.apiUrl}Lista`);
   }
-  PostSaveUsers(resquest:Users): Observable<ResponseApi>{
+  SaveUsers(resquest:Users): Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.apiUrl}Guardar`, resquest);
   }
 
-  PutEditUsers(resquest:Users): Observable<ResponseApi>{
+  EditUsers(resquest:Users): Observable<ResponseApi>{
     return this.http.put<ResponseApi>(`${this.apiUrl}Editar`, resquest);
   }
 

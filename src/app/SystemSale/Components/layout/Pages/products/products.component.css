@@ -1,0 +1,30 @@
+.title{
+    margin: 20px 0px 0px 40px;
+}
+
+.card-Product{
+    margin: 20px 40px 40px 40px;
+}
+
+table{
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+    font-size: 14px;
+  }
+  
+
+th {
+    text-align: center;
+  }
+  
+  td {
+    text-align: justify;
+    line-height: 1.5; 
+  }
+  mat-divider{
+    margin-bottom: 15px;
+  }
+ 

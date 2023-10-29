@@ -26,12 +26,10 @@ export class UsersComponent implements AfterViewInit, OnInit {
   
   obtenerUsers(){
     this.userService.GetUsers().subscribe({
-      next:(res)=>{
-        if(res.status){ this.dataListUser = res.value} 
+      next:(data)=>{
+        if(data.status){ this.dataListUser.data = data.value} 
         else{this.utilityService.Alert("No se encontro nada","Ha ocurrido un error")}
       },
-
-
       error:(e)=>{}
     })
   }
@@ -74,8 +72,8 @@ export class UsersComponent implements AfterViewInit, OnInit {
       showCancelButton: true,
       cancelButtonText: "No, Regresar",
       cancelButtonColor: '#C0392B'
-    }).then((result) => { // Cambio aquí
-      if (result.isConfirmed) { // Cambio aquí
+    }).then((result) => {
+      if (result.isConfirmed) { 
         this.userService.DeleteUsers(user.idUsers).subscribe({
           next: (res) => {
             if (res.status) {

@@ -17,11 +17,11 @@ export class ProductsService {
     return this.http.get<ResponseApi>(`${this.apiUrl}Lista`);
   }
 
-  PostSaveProduct(resquest:Products): Observable<ResponseApi>{
+  SaveProduct(resquest:Products): Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.apiUrl}Guardar`, resquest);
   }
 
-  PutEditProduct(resquest:Products): Observable<ResponseApi>{
+  EditProduct(resquest:Products): Observable<ResponseApi>{
     return this.http.put<ResponseApi>(`${this.apiUrl}Editar`, resquest);
   }
 

@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>{{ titleAction }} Producto</h1>
+
+<mat-dialog-content>
+    <form [formGroup]="formProduct">
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre del producto</mat-label>
+                    <input matInput formControlName="nombre" autocomplete="off" />
+                    <mat-icon matSuffix>fit_screen</mat-icon>
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Categoria</mat-label>
+                    <mat-select formControlName="idCategoria">
+                        <mat-option *ngFor="let item of ListCategoria"
+                            [value]="item.idCategoria">
+                            {{ item.nombre }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Stock</mat-label>
+                    <input matInput formControlName="stock" autocomplete="off"
+                        type="number" />
+                    <mat-icon matSuffix>inventory</mat-icon>
+                </mat-form-field>
+            </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Precio</mat-label>
+                        <input matInput formControlName="price"
+                            autocomplete="off"/>
+                        <mat-icon matSuffix>sell</mat-icon>
+                    </mat-form-field>
+                </mat-grid-tile>
+          
+                    <mat-grid-tile>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Estado</mat-label>
+                            <mat-select formControlName="esActivo">
+                                <mat-option value="1">Activo</mat-option>
+                                <mat-option value="0">Inactivo</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </mat-grid-tile>
+
+                </mat-grid-list>
+            </form>
+        </mat-dialog-content>
+
+        <mat-dialog-actions align="end">
+            <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+            <button mat-raised-button [disabled]="formProduct.invalid"
+                (click)="saveEdit_Product()">{{buttonAction}}</button>
+                
+</mat-dialog-actions>

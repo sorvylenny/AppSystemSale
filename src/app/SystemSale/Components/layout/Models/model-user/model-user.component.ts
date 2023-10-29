@@ -28,11 +28,11 @@ export class ModelUserComponent implements OnInit {
     private utilityService: UtilityService
   ) {
     this.formUser = this.fb.group({
-      fullname: ["", Validators.required],
-      email: ["", Validators.required],
-      idRoles: ["", Validators.required],
-      clave: ["", Validators.required],
-      esActivo: ["", Validators.required]
+      fullname: ['', Validators.required],
+      email: ['', Validators.required],
+      idRoles: ['', Validators.required],
+      clave: ['', Validators.required],
+      esActivo: [1, Validators.required]
     });
     if (this.dateUser!=null){
       this.titleAction="Editar";
@@ -69,7 +69,7 @@ export class ModelUserComponent implements OnInit {
     }
 
     if (this.dateUser == null) {
-      this.userService.PostSaveUsers(user).subscribe({
+      this.userService.SaveUsers(user).subscribe({
         next: (res) => {
           if (res.status) {
             this.utilityService.Alert('success', 'Usuario creado correctamente');
@@ -82,7 +82,7 @@ export class ModelUserComponent implements OnInit {
       });
        
     } else {
-      this.userService.PutEditUsers(user).subscribe({
+      this.userService.EditUsers(user).subscribe({
         next:(res) =>{
           if (res.status) {
             this.utilityService.Alert('success', 'Usuario editado correctamente');
