@@ -30,7 +30,7 @@ export class ModelProductComponent implements OnInit {
       idCategoria: ['', Validators.required],
       stock: ['', Validators.required],
       price: ['', Validators.required],
-      esActivo: [1, Validators.required]
+      esActivo: ['1', Validators.required]
     });
     if (this.dateProduct!=null){
       this.titleAction="Editar";

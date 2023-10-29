@@ -32,7 +32,7 @@ export class ModelUserComponent implements OnInit {
       email: ['', Validators.required],
       idRoles: ['', Validators.required],
       clave: ['', Validators.required],
-      esActivo: [1, Validators.required]
+      esActivo: ['1', Validators.required]
     });
     if (this.dateUser!=null){
       this.titleAction="Editar";

@@ -13,7 +13,7 @@ export class SaleService {
 
   constructor( private http: HttpClient) { }
 
-  PostSaveSale(resquest:Sales): Observable<ResponseApi>{
+  RegisterSale(resquest:Sales): Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.apiUrl}Registrar`, resquest);
   }
 
