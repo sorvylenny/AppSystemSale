@@ -125,7 +125,7 @@ export class SaleComponent {
             Swal.fire({
               icon: 'success',
               title:'Venta exitosa!',
-              text:`Numero de venta: ${response.value.numberId}`
+              text:`Numero de venta: ${response.value.numeroDocumento}`
             })
           }else{
             this.utilityService.Alert("No se pudo registrar la venta","Ha ocurrido un error!");
