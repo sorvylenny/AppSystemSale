@@ -1,7 +1,28 @@
 .title{
-    margin: 20px 0px 0px 40px;
+    margin: 0px 0px 0px 40px;
 }
 
 .card-sale{
     margin: 20px 40px 40px 40px;
+    background-color:rgba(255, 255, 243, 0.911);
 }
+.campo-form{
+    background-color:rgba(255, 255, 243, 0.911);
+}
+.full-width{
+    width: 100%;
+}
+table{
+    background-color:rgba(255, 255, 243, 0.911);
+}
+th {
+    text-align: center;
+  }
+  
+  td {
+    text-align: center;
+    line-height: 1.5; 
+  }
+  mat-divider{
+    margin-bottom: 15px;
+  }

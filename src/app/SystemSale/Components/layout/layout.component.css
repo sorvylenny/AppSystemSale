@@ -1,8 +1,22 @@
- 
  .menu-span{
     flex: 1 1 auto;
  }
  .menu-label{
     font-size: 20px;
     margin-right: 20px;
+   
+ }
+ .pageInit{
+   background-color:beige;
+   height: 80vh
+ }
+ @media screen and (min-width: 375px) and (max-width: 767px) {
+   .menu-label {
+     font-size: 12px; 
+   }
+ 
+   .pageInit {
+     height: 60vh; 
+   }
+ 
  }

@@ -1,9 +1,10 @@
 .title{
-    margin: 20px 0px 0px 40px;
+    margin: 0px 0px 0px 40px;
 }
 
 .card-reporte{
     margin: 20px 40px 40px 40px;
+    background-color:rgba(255, 255, 243, 0.911);
 }
 .campo-form{
     display: flex;
@@ -18,4 +19,13 @@ mat-form-field{
 }
 table{
     width: 100%;
+    background-color:rgba(255, 255, 243, 0.911);
 }
+th {
+    text-align: center;
+  }
+  
+  td {
+    text-align: center;
+    line-height: 1.5; 
+  }

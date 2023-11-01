@@ -17,7 +17,7 @@
 
         <div class="mat-elevation-z2">
             <table mat-table [dataSource]="dataListUser" class="mat-elevation-z8 table-responsive">
-                <ng-container matColumnDef="fullname">
+                <ng-container matColumnDef="fullname" class="hide-on-mobile">
                     <th mat-header-cell *matHeaderCellDef> Nombre Completo</th>
                     <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
                   </ng-container>
@@ -29,7 +29,7 @@
                     <th mat-header-cell *matHeaderCellDef> Rol Descripción</th>
                     <td mat-cell *matCellDef="let element"> {{element.rolesDescripcion}} </td>
                   </ng-container>
-                <ng-container matColumnDef="estado">
+                <ng-container matColumnDef="estado" class="hide-on-mobile">
                     <th mat-header-cell *matHeaderCellDef> Estado</th>
                     <td mat-cell *matCellDef="let element"> {{element.esActivo==1 ? 'Activo' : 'Inactivo'}} </td>
                   </ng-container>

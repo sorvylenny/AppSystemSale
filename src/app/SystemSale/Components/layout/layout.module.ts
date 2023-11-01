@@ -10,8 +10,8 @@ import { SharedModule } from '../../Shared/shared/shared.module';
 import { ModelUserComponent } from './Models/model-user/model-user.component';
 import { ModelProductComponent } from './Models/model-product/model-product.component';
 import { ModelDetailsSaleComponent } from './Models/model-details-sale/model-details-sale.component';
-import { SalesComponent } from './pages/sales/sales.component';
-import { HistorialVentaComponent } from './pages/historial-venta/historial-venta.component';
+import { SalesComponent } from './Pages/sales/sales.component';
+import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta.component';
 
 
 
