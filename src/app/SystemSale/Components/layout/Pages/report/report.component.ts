@@ -4,8 +4,10 @@ import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import * as moment from 'moment';
+import * as XLSX from 'xlsx';
 import { SaleService } from 'src/app/SystemSale/Services/sale.service';
 import { UtilityService } from 'src/app/SystemSale/Shared/utility.service';
+import { Reporte } from 'src/app/SystemSale/interfaces/reporte';
 
 export const MY_DATA_FORMATS = {
   parse: {
@@ -24,15 +26,15 @@ export const MY_DATA_FORMATS = {
 })
 export class ReportComponent implements OnInit, AfterViewInit {
   formFiltre: FormGroup;
-  listSaleReport: Report[] = [];
+  listSaleReport: Reporte[] = [];
   ColumnsTable: string[] = [
-    'fechaRegistro',
     'numeroVenta',
-    'tipoPago',
-    'prodcuto',
-    'cantidad',
-    'precio',
+    'producto',
     'totalProducto',
+    'fechaRegistro',
+    'tipoPago',
+    'precio',
+    'cantidad',
   ];
   dateSaleReport = new MatTableDataSource(this.listSaleReport);
   @ViewChild(MatPaginator) paginatorTable!: MatPaginator;
@@ -50,9 +52,8 @@ export class ReportComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.dateSaleReport.paginator = this.paginatorTable;
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {} 
+  
   searchSale() {
     const datInit = moment(this.formFiltre.value.dateInit).format('DD/MM/YYYY');
     const datEnd = moment(this.formFiltre.value.dateEnd).format('DD/MM/YYYY');
@@ -77,6 +78,11 @@ export class ReportComponent implements OnInit, AfterViewInit {
   }
 
   exportarExcel(){
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.json_to_sheet(this.listSaleReport);
     
+    XLSX.utils.book_append_sheet(wb, ws, "Reporte");
+    XLSX.writeFile(wb,"Reporte Ventas.xlsx");
+
   }
 }
