@@ -4,9 +4,11 @@ import { LayoutComponent } from './layout.component';
 import { DashBoardComponent } from './Pages/dash-board/dash-board.component';
 import { UsersComponent } from './Pages/users/users.component';
 import { ProductsComponent } from './Pages/products/products.component';
-import { SaleComponent } from './Pages/sale/sale.component';
-import { DetailsSaleComponent } from './Pages/details-sale/details-sale.component';
 import { ReportComponent } from './Pages/report/report.component';
+import { SalesComponent } from './Pages/sales/sales.component';
+import { HistorialVentaComponent } from './Pages/historial-venta/historial-venta.component';
+
+
 
 const routes: Routes = [
   {
@@ -14,7 +16,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'dashBoard',
+        path: 'dashboard',
         component: DashBoardComponent,
       },
       {
@@ -26,12 +28,12 @@ const routes: Routes = [
         component: ProductsComponent,
       },
       {
-        path: 'sale',
-        component: SaleComponent,
+        path: 'sales',
+        component: SalesComponent,
       },
       {
-        path: 'detailsSale',
-        component: DetailsSaleComponent,
+        path: 'historial_venta',
+        component: HistorialVentaComponent,
       },
       {
         path: 'report',

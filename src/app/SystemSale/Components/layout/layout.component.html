@@ -6,39 +6,22 @@
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
-       
+        
+        <span class="menu-span"></span>
+        <label class="menu-label">{{emailUser}}|{{rolesUser}}</label>
+        <button mat-icon-button (click)="closetSesion()">
+            <mat-icon>logout</mat-icon>
+        </button>
     </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="push" style="width: 300px;" >
         <mat-nav-list>
-            <mat-list-item routerLink="/pages/dashBoard" (click)="sidenav.toggle()">
-                <mat-icon  mat-list-icon>dashboard</mat-icon>
-                <span>DashBoard</span>
-            </mat-list-item>
-            <mat-list-item routerLink="/pages/users" (click)="sidenav.toggle()">
-                <mat-icon  mat-list-icon>group</mat-icon>
-                <span>Usuarios</span>
-            </mat-list-item>
-            <mat-list-item routerLink="/pages/products" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>collections_bookmark</mat-icon>
-                <span>Productos</span>
-            </mat-list-item>
-            <mat-list-item routerLink="/pages/sale"(click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>point_of_sale</mat-icon>
-                <span>Venta</span>
-            </mat-list-item>
-            <mat-list-item routerLink="/pages/detailsSale" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>edit_note</mat-icon>
-                <span>Detalle de Venta</span>
-            </mat-list-item>
-            <mat-list-item routerLink="/pages/report" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>receipt_long</mat-icon>
-                <span>Reportes</span>
-            </mat-list-item>
-
-            
+                <mat-list-item  *ngFor="let menu of listMenus" [routerLink]="menu.url" (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>{{menu.icon}}</mat-icon>
+                <span>{{menu.nombre}}</span>
+            </mat-list-item> 
         </mat-nav-list>
     </mat-sidenav>
 

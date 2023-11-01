@@ -11,7 +11,6 @@ import { Sales } from 'src/app/SystemSale/interfaces/sales';
 import { ModelDetailsSaleComponent } from '../../Models/model-details-sale/model-details-sale.component';
 
 
-
 export const MY_DATA_FORMATS = {
   parse: {
     dateInput: 'DD/MM/YYYY',
@@ -23,12 +22,12 @@ export const MY_DATA_FORMATS = {
 };
 
 @Component({
-  selector: 'app-details-sale',
-  templateUrl: './details-sale.component.html',
-  styleUrls: ['./details-sale.component.css'],
+  selector: 'app-historial-venta',
+  templateUrl: './historial-venta.component.html',
+  styleUrls: ['./historial-venta.component.css'],
   providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_DATA_FORMATS }],
 })
-export class DetailsSaleComponent implements OnInit, AfterViewInit {
+export class HistorialVentaComponent implements OnInit,AfterViewInit{
   formSearch: FormGroup;
   optionSearch: any[] = [
     { value: "fecha", descripcion: "Por fechas" },
@@ -120,4 +119,5 @@ export class DetailsSaleComponent implements OnInit, AfterViewInit {
       width:'800px'
     })
   }
+
 }

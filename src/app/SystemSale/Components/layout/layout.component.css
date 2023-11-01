@@ -1,1 +1,8 @@
  
+ .menu-span{
+    flex: 1 1 auto;
+ }
+ .menu-label{
+    font-size: 20px;
+    margin-right: 20px;
+ }

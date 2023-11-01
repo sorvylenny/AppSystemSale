@@ -7,15 +7,14 @@ import { UtilityService } from 'src/app/SystemSale/Shared/utility.service';
 import { DetailsSale } from 'src/app/SystemSale/interfaces/details-sale';
 import { Products } from 'src/app/SystemSale/interfaces/products';
 import { Sales } from 'src/app/SystemSale/interfaces/sales';
-
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-sale',
-  templateUrl: './sale.component.html',
-  styleUrls: ['./sale.component.css'],
+  selector: 'app-sales',
+  templateUrl: './sales.component.html',
+  styleUrls: ['./sales.component.css']
 })
-export class SaleComponent {
+export class SalesComponent {
   listProduct: Products[] = [];
   listaProductFilter: Products[] = [];
   listProductForSale: DetailsSale[] = [];
