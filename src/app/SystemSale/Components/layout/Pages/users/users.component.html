@@ -3,9 +3,11 @@
 
 <mat-card class="card-user">
     <mat-card-title>
-        <button mat-raised-button color="primary" (click)="newUser()">
+      <div>
+        <button mat-raised-button class="custom-primary-button" (click)="newUser()">
         <mat-icon mat-list-icon>add_circle</mat-icon>
             Nuevo Usuario</button>   
+      </div>
     </mat-card-title>
     <mat-divider></mat-divider>
     <mat-card-content class="dashboard-card-content">
@@ -18,7 +20,7 @@
         <div class="mat-elevation-z2">
             <table mat-table [dataSource]="dataListUser" class="mat-elevation-z8 table-responsive">
                 <ng-container matColumnDef="fullname" class="hide-on-mobile">
-                    <th mat-header-cell *matHeaderCellDef> Nombre Completo</th>
+                    <th mat-header-cell *matHeaderCellDef>Nombre</th>
                     <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
                   </ng-container>
                 <ng-container matColumnDef="email">
@@ -26,7 +28,7 @@
                     <td mat-cell *matCellDef="let element"> {{element.email}} </td>
                   </ng-container>
                 <ng-container matColumnDef="rolesDescripcion">
-                    <th mat-header-cell *matHeaderCellDef> Rol Descripción</th>
+                    <th mat-header-cell *matHeaderCellDef> Rol</th>
                     <td mat-cell *matCellDef="let element"> {{element.rolesDescripcion}} </td>
                   </ng-container>
                 <ng-container matColumnDef="estado" class="hide-on-mobile">
@@ -36,10 +38,10 @@
                 <ng-container matColumnDef="acciones">
                     <th mat-header-cell *matHeaderCellDef style="width: 80px;"></th>
                     <td mat-cell *matCellDef="let element" style="display: flex;gap: 8px;"> 
-                        <button mat-icon-button color="primary" (click)="editUser(element)">
+                        <button mat-icon-button class="custom-primary-icon small-button" (click)="editUser(element)">
                             <mat-icon mat-list-icon>border_color</mat-icon>
                                </button>  
-                        <button mat-icon-button color="warn" (click)="deleteUser(element)">
+                        <button mat-icon-button color="warn"  class="small-button" (click)="deleteUser(element)">
                             <mat-icon mat-list-icon>delete</mat-icon>
                                </button>  
                     </td>

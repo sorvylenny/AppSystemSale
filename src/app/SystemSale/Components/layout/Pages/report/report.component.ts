@@ -30,11 +30,11 @@ export class ReportComponent implements OnInit, AfterViewInit {
   ColumnsTable: string[] = [
     'numeroVenta',
     'producto',
-    'totalProducto',
     'fechaRegistro',
     'tipoPago',
     'precio',
     'cantidad',
+    'totalProducto',
   ];
   dateSaleReport = new MatTableDataSource(this.listSaleReport);
   @ViewChild(MatPaginator) paginatorTable!: MatPaginator;

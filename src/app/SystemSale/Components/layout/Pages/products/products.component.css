@@ -23,10 +23,37 @@ th {
   }
   
   td {
-    text-align: justify;
+    text-align: center;
     line-height: 1.5; 
   }
   mat-divider{
     margin-bottom: 15px;
   }
- 
+  @media (min-width: 424px) and (max-width: 767px) {
+    .title {
+        margin: 0 0 0 20px;
+        font-size: 20px;
+    }
+
+    .card-Product {
+        margin: 15px;
+    }
+
+    table {
+        font-size: 12px; 
+    }
+
+    th, td {
+        padding: 6px;
+        line-height: 0,2; 
+    }
+  
+    mat-divider {
+        margin-bottom: 10px;
+    }
+    .small-button {
+      width: 24px;
+      height: 24px;
+      align-items: center;
+  }
+}

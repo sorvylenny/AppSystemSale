@@ -15,6 +15,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./sales.component.css']
 })
 export class SalesComponent {
+  agregarVenta!:boolean;
+
+
   listProduct: Products[] = [];
   listaProductFilter: Products[] = [];
   listProductForSale: DetailsSale[] = [];
@@ -114,8 +117,11 @@ export class SalesComponent {
         totalText: String(this.totalCash.toFixed(2)),
         detailsSales: this.listProductForSale
       }
+      console.log('Datos de la solicitud:', request);
+
       this.saleService.RegisterSale(request).subscribe({
         next:(response)=>{
+          console.log('Respuesta del servicio:', response);
           if(response.status){
             this.totalCash = 0.00;
             this.listProductForSale=[];
@@ -127,14 +133,16 @@ export class SalesComponent {
               text:`Numero de venta: ${response.value.numeroDocumento}`
             })
           }else{
+            
             this.utilityService.Alert("No se pudo registrar la venta","Ha ocurrido un error!");
+            console.log(response)
           }
         },
         complete:()=>{
           this.bloquearButtonRegister=false;
         },
         error:(e)=>{
-          console.log(e)
+          console.log('Error en la llamada al servicio:', e);
         }
       })
     }

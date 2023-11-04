@@ -3,5 +3,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif;}
 body {
-    background-color: rgb(245, 245, 220);
-  }
+  background-color:rgba(255, 255, 243, 0.911);
+}
+.custom-primary-button {
+  background-color: #48C9B0 !important;
+  color: white !important;
+}
+
+.custom-primary-icon .mat-icon {
+  color: #48C9B0 !important;
+}
+
+
+

@@ -25,4 +25,53 @@ th {
     text-align: center;
     line-height: 1.5; 
   }
+  button[disabled] {
+    background-color: rgb(228, 228, 228); 
+    color: white; 
+  }
+  
+  button:not([disabled]) {
+    background-color: #48C9B0; 
+    color: white; 
+  }
+
+  @media (max-width: 767px) {
+    .title{
+        margin: 0 0 0 20px;
+        font-size: 20px;
+    }
+    .card-sale {
+        margin: 20px 10px; 
+    }
+    .boton {
+        width: 80%; 
+    }
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px; 
+    }
+    .full-width{
+      width:80%;
+  }
+}
+
+
+@media (max-width: 424px) {
+    .title{
+        margin: 0 0 0 20px;
+        font-size: 15px;
+    }
+    .card-sale {
+        margin: 10px; 
+    }
+    table {
+        font-size: 12px; 
+    }
+    th, td {
+        padding: 8px; 
+    }
+    
+}
  

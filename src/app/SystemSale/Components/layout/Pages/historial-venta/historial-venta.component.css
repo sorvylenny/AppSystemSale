@@ -26,3 +26,31 @@ th {
   mat-divider{
     margin-bottom: 15px;
   }
+
+  @media (min-width: 424px) and (max-width: 767px) {
+    .title {
+        margin: 0 0 0 20px;
+        font-size: 20px;
+    }
+
+    .card-sale {
+        margin: 20px;
+    }
+    .full-width {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px; 
+        align-items: center;
+    }
+
+    th.mat-header-cell, td.mat-cell {
+        padding: 12px; 
+        text-align: center;
+    }
+
+    mat-divider {
+        margin-bottom: 10px;
+    }
+}

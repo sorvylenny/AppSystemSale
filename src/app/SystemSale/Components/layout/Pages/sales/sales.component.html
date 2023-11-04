@@ -36,14 +36,14 @@
                 style="margin-left: 40px"
               >
                 <mat-label>Cantidad</mat-label>
-                <input matInput formControlName="cantidad" type="number" min="1" />
+                <input matInput formControlName="cantidad" type="number" min="1"/>
               </mat-form-field>
             </mat-grid-tile>
 
             <mat-grid-tile>
               <button
                 mat-raised-button
-                color="primary"
+                class="mat-button"
                 style="width: 80%"
                 [disabled]="formProductSale.invalid"
               >
@@ -66,10 +66,9 @@
                 <mat-grid-tile>
                     <button
                     mat-raised-button
-                    color="primary"
-                    style="width: 80%"
-                  >
-                     Total:$/.{{totalCash.toFixed(2)}}
+                    class="custom-primary-button"
+                    style="width: 80%">
+                     Total:{{totalCash.toFixed(2) | currency}}
                   </button>
                 </mat-grid-tile>
         </mat-grid-list>
@@ -85,11 +84,11 @@
                   </ng-container>
                 <ng-container matColumnDef="precio">
                     <th mat-header-cell *matHeaderCellDef> Precio</th>
-                    <td mat-cell *matCellDef="let element"> {{element.priceText}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.priceText | currency}} </td>
                   </ng-container>
                 <ng-container matColumnDef="total">
                     <th mat-header-cell *matHeaderCellDef> Total</th>
-                    <td mat-cell *matCellDef="let element"> {{element.totalText}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.totalText| currency}} </td>
                   </ng-container>
                 <ng-container matColumnDef="accion">
                     <th mat-header-cell *matHeaderCellDef style="width: 80px;"></th>
@@ -106,7 +105,8 @@
         <mat-grid-list cols="4" rowHeight="80px">
             <mat-grid-tile [colspan]="3"></mat-grid-tile>
             <mat-grid-tile>
-                <button mat-raised-button color="primary" style="width: 80%;" 
+                <button mat-raised-button  style="width: 80%;" 
+                class="mat-button"
                 [disabled]="listProductForSale.length < 1|| bloquearButtonRegister" 
                 (click)="registrarSale()">
                     <mat-icon mat-list-icon>label</mat-icon> Registar

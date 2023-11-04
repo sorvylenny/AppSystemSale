@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100%;
     align-items: center;
-    background-color:beige;
+    background-color:rgba(255, 255, 243, 0.911);
 }
 
 .cardLogin{
@@ -27,3 +27,14 @@
 .full-width{
     width: 100%;
 }
+
+.custom-button[disabled] {
+    background-color: rgb(228, 228, 228);
+    color: white;
+  }
+  
+  .custom-button:not([disabled]) {
+    background-color: #48C9B0;
+    color: white;
+  }
+  

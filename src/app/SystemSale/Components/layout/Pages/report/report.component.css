@@ -29,3 +29,42 @@ th {
     text-align: center;
     line-height: 1.5; 
   }
+
+  @media (max-width: 767px) {
+    .title{
+        margin: 0 0 0 20px;
+        font-size: 20px;
+    }
+    .card-reporte {
+        margin: 20px 10px; 
+    }
+    .boton {
+        width: 100%; 
+    }
+    mat-form-field {
+        margin-right: 0; 
+    }
+    table {
+        font-size: 14px; 
+    }
+    th, td {
+        padding: 12px; 
+    }
+}
+
+
+@media (max-width: 424px) {
+    .title{
+        margin: 0 0 0 20px;
+        font-size: 15px;
+    }
+    .card-reporte {
+        margin: 10px; 
+    }
+    table {
+        font-size: 11px; 
+    }
+    th, td {
+        padding: 8px; 
+    }
+}

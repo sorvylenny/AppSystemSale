@@ -4,10 +4,12 @@
  .menu-label{
     font-size: 20px;
     margin-right: 20px;
-   
+ }
+ mat-toolbar{
+  background-color: #48C9B0;
  }
  .pageInit{
-   background-color:beige;
+  background-color:rgba(255, 255, 243, 0.911);
    height: 80vh
  }
  @media screen and (min-width: 375px) and (max-width: 767px) {
