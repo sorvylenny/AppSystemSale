@@ -8,7 +8,7 @@ SystemSales es una aplicación web que ofrece las siguientes funcionalidades:
 
 ### 1. Autenticación de Usuarios
 
-- **Login**: Los usuarios pueden iniciar sesión proporcionando su correo electrónico y contraseña.
+- **Login**: Los usuarios pueden iniciar sesión proporcionando su correo electrónico y contraseña para el usuario admin email:prueba@example.com, clave:1234, supervisor email:prueba1@example.com, empleado email:prueba2@example.com, clave:abc123.
 
 ### 2. Módulo de Venta
 
