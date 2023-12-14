@@ -86,7 +86,7 @@ Primero, clona el repositorio de SystemSales desde GitHub a tu computadora local
 3. Inicia la aplicación: `ng serve`
 4. Abre tu navegador web y visita `http://localhost:4200/`
 5. Validar el enviroments que este en  `http://www.systemsales.somee.com/api/` si no le da alli descargue el backend y cambielo al localhost.
-6. El backend esta hecho en .net y subido a esta ruta `http://www.systemsales.somee.com/swagger/index.html`
+6. El backend está implementado en .NET y se encuentra disponible en el siguiente enlace: [http://www.systemsales.somee.com/swagger/index.html](http://www.systemsales.somee.com/swagger/index.html). Para ejecutar localmente, copia esta URL y tendrás acceso a todas las funcionalidades del sistema.
 
 ¡Disfruta explorando la aplicación!
 
